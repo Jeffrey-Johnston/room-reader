@@ -34,7 +34,7 @@
   border: none;
   color: #eeeeee;
   font-weight: bold;
-  background-color: #00d8e7;
+  background-image: linear-gradient(120deg, #28d5db, #2ecacf, #28d5db, #b0ecee);
   display: flex;
   justify-content: center;
   align-items: center;
