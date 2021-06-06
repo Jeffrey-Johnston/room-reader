@@ -6,7 +6,6 @@ import AverageEmotions from "./components/AvergaeEmotions";
 import DetectedEmotions from "./components/DetectedEmotions";
 import Home from "./components/Home/Home";
 import ImageForm from "./components/ImageForm";
-import MainNavigation from "./components/layout/MainNavigation";
 
 function App() {
   const [emotions, setEmotions] = useState([]);
@@ -69,7 +68,6 @@ function App() {
 
   return (
     <div className="emotion-detector">
-      <MainNavigation />
       <Switch>
         <Route path="/">
           <Home />

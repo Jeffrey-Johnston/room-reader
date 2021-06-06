@@ -3,6 +3,7 @@ import classes from "./Home.module.css";
 
 import backgroundImage from "../../assets/images/room-reader-background-body.jpeg";
 import TopSection from "./Top-Section";
+import Mission from "./Mission";
 
 const Home = () => {
   return (
@@ -17,6 +18,9 @@ const Home = () => {
             />
           </div>
           <TopSection />
+        </section>
+        <section className={classes.descriptionSection}>
+          <Mission />
         </section>
       </main>
     </Fragment>

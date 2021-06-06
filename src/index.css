@@ -26,7 +26,20 @@ body {
   border-radius: 10px;
 }
 
-* {
+main,
+section,
+div,
+img,
+h1,
+h2,
+p,
+button,
+ul,
+li,
+nav,
+form,
+input,
+label {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
