@@ -8,7 +8,7 @@
 }
 
 .description div {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   max-width: 375px;
 }
 
@@ -43,5 +43,6 @@
 
 .disclaimer {
   font-size: 16px;
+  margin: 1rem;
   color: gray;
 }
