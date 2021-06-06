@@ -1,0 +1,47 @@
+.description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.description div {
+  margin-bottom: 2rem;
+  max-width: 375px;
+}
+
+.description h2 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 32px;
+  color: #000000;
+}
+
+.description p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.uploadIcon {
+  height: 5rem;
+  width: 5rem;
+}
+
+.dataIcon {
+  margin: 0.7rem 0;
+  width: auto;
+  height: 4rem;
+}
+
+.imageIcon {
+  height: 5rem;
+  width: 5rem;
+}
+
+.disclaimer {
+  font-size: 16px;
+  color: gray;
+}

@@ -4,6 +4,7 @@ import classes from "./Home.module.css";
 import backgroundImage from "../../assets/images/room-reader-background-body.jpeg";
 import TopSection from "./Top-Section";
 import Mission from "./Mission";
+import Description from "./Description";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         </section>
         <section className={classes.descriptionSection}>
           <Mission />
+          <Description />
         </section>
       </main>
     </Fragment>

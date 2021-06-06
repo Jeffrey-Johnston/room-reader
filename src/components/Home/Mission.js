@@ -22,6 +22,7 @@ const Mission = () => {
             identification technologies to detect emotional facial expressions.
           </p>
         </div>
+        <hr className={classes.line} />
       </section>
     </Fragment>
   );
