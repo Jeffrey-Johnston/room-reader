@@ -1,0 +1,32 @@
+.card {
+  min-height: 160px;
+}
+
+ul {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 16px;
+  color: rgb(44, 150, 250);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.red {
+  color: red;
+}
+.orange {
+  color: orange;
+}
+.yellow {
+  color: yellow;
+}
+.green {
+  color: green;
+}

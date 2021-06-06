@@ -1,0 +1,18 @@
+.header {
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+.logoContainer {
+}
+
+.logo {
+  position: absolute;
+  left: 1.9rem;
+  width: 12rem;
+  height: auto;
+  z-index: 2;
+}

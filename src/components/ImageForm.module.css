@@ -1,0 +1,33 @@
+.card {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 20rem;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form label,
+button {
+  margin: 1rem;
+}
+
+.form button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #169ef2;
+  border: 1px solid #169ef2;
+  color: white;
+  padding: 0.25rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.form button:hover,
+.form button:active {
+  background-color: #169ef269;
+  border-color: #169ef269;
+}

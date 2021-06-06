@@ -1,0 +1,16 @@
+.mainContent {
+  position: absolute;
+  width: 50%;
+  height: fit-content;
+  margin-top: 10rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  color: #eeeeee;
+}
+
+p {
+  margin-bottom: 2rem;
+}
