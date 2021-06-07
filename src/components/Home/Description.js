@@ -12,7 +12,7 @@ const Description = () => {
           <h2>Step One</h2>
           <p>
             Upload a pdf file, jpg file or image URL address, and give your
-            image a title.
+            image a title
           </p>
           <img
             className={classes.uploadIcon}
@@ -23,7 +23,7 @@ const Description = () => {
         <div>
           <h2>Step Two</h2>
           <p>
-            Receive your image analysis, inspect data, and add personal notes{" "}
+            Receive your image analysis, inspect data, and add personal notes
           </p>
           <img className={classes.dataIcon} src={dataIcon} alt="directions" />
         </div>
@@ -36,7 +36,7 @@ const Description = () => {
           <img className={classes.imageIcon} src={imageIcon} alt="directions" />
         </div>
         <span className={classes.disclaimer}>
-          RoomReader and Luxand do not store or share any of your images.
+          RoomReader and Luxand do not store or share any of your images
         </span>
       </section>
     </Fragment>
