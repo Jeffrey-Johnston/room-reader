@@ -45,6 +45,7 @@ const ImageForm = (props) => {
       <section className={classes.imageForm}>
         <img className={classes.logo} src={logo} alt="logo" />
         {/* <img src={toBase64} /> */}
+        <h1>Emotion Detecotor</h1>
         <form className={classes.form} onSubmit={submitHandler}>
           <input type="text" placeholder="Enter image title" required />
           <div className={classes.urlInput}>

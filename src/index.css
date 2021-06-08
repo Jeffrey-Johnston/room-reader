@@ -76,12 +76,17 @@ code {
 }
 
 .loading-container {
+  /* position: absolute;
+  top: 75%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  margin-top: 38rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 16px;
 }
-
 .lds-facebook {
   display: inline-block;
   position: relative;
@@ -93,7 +98,7 @@ code {
   position: absolute;
   left: 8px;
   width: 16px;
-  background: #fff;
+  background-color: #28d5db;
   animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 .lds-facebook div:nth-child(1) {
@@ -102,6 +107,7 @@ code {
 }
 .lds-facebook div:nth-child(2) {
   left: 32px;
+
   animation-delay: -0.12s;
 }
 .lds-facebook div:nth-child(3) {
@@ -117,5 +123,6 @@ code {
   100% {
     top: 24px;
     height: 32px;
+    background-color: #eeeeee;
   }
 }

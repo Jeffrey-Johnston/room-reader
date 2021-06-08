@@ -3,22 +3,28 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
+  width: 90%;
   height: 390px;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 2rem;
+  padding: 0.5rem 0;
   border-radius: 12px;
   background-color: #eeeeee;
 }
 
 .logo {
   margin: 0;
-
-  width: 5rem;
+  padding: 0;
+  width: 7rem;
   height: auto;
+}
+
+.imageForm h1 {
+  margin: 0.5rem;
+  font-size: 30px;
+  color: gray;
 }
 
 .form div {
@@ -28,9 +34,48 @@
   width: 100%;
 }
 
+.form label {
+  margin: 0.5rem 0;
+}
+.form input {
+  margin: 0.75rem 0;
+  height: 2rem;
+  width: fit-content;
+  text-align: center;
+  font-size: 24px;
+
+  border: none;
+  border-bottom: 1px solid lightgray;
+  background-color: inherit;
+}
+
+.or {
+  margin-bottom: 2rem;
+  font-size: 24px;
+  color: gray;
+}
+
+.fileInput {
+  /* margin-left: 50%; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.fileInput input {
+  position: absolute;
+  font-size: 20px;
+  border: none;
+}
+
+.fileInput input[type="file"] {
+  color: transparent;
+}
+
 .form button {
-  width: 10rem;
+  width: 16rem;
   margin: 0 auto;
+  margin-top: 2rem;
   height: 3rem;
   border-radius: 12px;
   font-size: 18px;
@@ -48,39 +93,4 @@
 .form button:active {
   color: #166264;
   background-image: linear-gradient(120deg, #b0ecee, #b0ecee);
-}
-
-.form label {
-  margin: 0.5rem 0;
-}
-.form input {
-  margin: 0.5rem 0;
-  height: 3rem;
-  width: 75%;
-  text-align: center;
-  font-size: 24px;
-  border: none;
-  border-bottom: 1px solid #000000;
-  background-color: inherit;
-}
-
-.fileInput {
-  display: flex;
-  justify-content: center;
-}
-
-.fileInput input {
-  margin-left: 26.5%;
-  font-size: 20px;
-  border: none;
-}
-
-.fileInput input[type="file"] {
-  color: transparent;
-}
-
-.or {
-  font-size: 20px;
-  color: gray;
-  margin: 0.5rem;
 }
