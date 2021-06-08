@@ -1,0 +1,29 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 0;
+  background-color: #000000;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: -2;
+}
+.logo {
+  position: absolute;
+  cursor: pointer;
+  top: -1rem;
+  left: 2.3rem;
+  width: 12rem;
+  height: auto;
+}
+
+.backgroundImage {
+  position: fixed;
+  bottom: 0;
+  left: -20rem;
+  width: auto;
+  height: 50%;
+  z-index: -1;
+}

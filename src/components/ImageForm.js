@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import Card from "../UI/Card";
+import { Fragment } from "react";
+import logo from "../assets/images/rr-logo.png";
 import classes from "./ImageForm.module.css";
 
 const ImageForm = (props) => {
@@ -40,28 +41,36 @@ const ImageForm = (props) => {
   // };
 
   return (
-    <Card className={classes.card}>
-      {/* <img src={toBase64} /> */}
-      <form className={classes.form} onSubmit={submitHandler}>
-        {/* <div>
-          <label htmlFor="myFile">Import File</label>
-          <input
-            type="file"
-            id="myFile"
-            onChange={(e) => {
-              submitHandler(e);
-            }}
-          />
-        </div> */}
-        <div>
-          <label htmlFor="imgUrl">Import Image Url</label>
-          <input type="text" id="imgUrl" name="imgUrl" ref={imageUrlRef} />
-        </div>
-        <div>
-          <button type="submit">Detect Emotion</button>
-        </div>
-      </form>
-    </Card>
+    <Fragment>
+      <section className={classes.imageForm}>
+        <img className={classes.logo} src={logo} alt="logo" />
+        {/* <img src={toBase64} /> */}
+        <form className={classes.form} onSubmit={submitHandler}>
+          <input type="text" placeholder="Enter image title" required />
+          <div className={classes.urlInput}>
+            <input
+              type="text"
+              placeholder="Enter image url"
+              ref={imageUrlRef}
+            />
+          </div>
+          <p className={classes.or}>or</p>
+          <div className={classes.fileInput}>
+            <input
+              className={classes.fInput}
+              type="file"
+              id="myFile"
+              onChange={(e) => {
+                submitHandler(e);
+              }}
+            />
+          </div>
+          <div>
+            <button type="submit">Detect Emotion</button>
+          </div>
+        </form>
+      </section>
+    </Fragment>
   );
 };
 

@@ -1,20 +1,21 @@
 import classes from "./Top-Section.module.css";
 
 import { Fragment } from "react";
-import { NavLink } from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
 const TopSection = () => {
+  const history = useHistory();
+
+  const startButtonHandler = () => {
+    history.push("/emotion-detector");
+  };
+
   return (
     <Fragment>
-      <nav>
-        <div className={classes.logoContainer}>
-          <NavLink to="/s">
-            <img className={classes.logo} src={logo} alt="logo" />
-          </NavLink>
-        </div>
-      </nav>
+      <div className={classes.logoContainer}>
+        <img className={classes.logo} src={logo} alt="logo" />
+      </div>
 
       <div className={classes.mainContent}>
         <p>
@@ -25,7 +26,9 @@ const TopSection = () => {
           Calculate emotional responses for focus groups, presentations and
           more…
         </p>
-        <button className={classes.button}>Get Started</button>
+        <button className={classes.button} onClick={startButtonHandler}>
+          Get Started
+        </button>
       </div>
     </Fragment>
   );

@@ -18,7 +18,7 @@ const Home = () => {
               alt="Digital human silhouette"
             />
           </div>
-          <TopSection />
+          <TopSection className={classes.topSection} />
         </section>
         <section className={classes.descriptionSection}>
           <Mission />

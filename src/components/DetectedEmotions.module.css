@@ -2,19 +2,19 @@
   min-height: 160px;
 }
 
-ul {
+.card ul {
   flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
 }
 
-h2 {
+.card h2 {
   margin-bottom: 1rem;
   font-size: 16px;
   color: rgb(44, 150, 250);
 }
 
-p {
+.card p {
   margin-bottom: 1rem;
 }
 

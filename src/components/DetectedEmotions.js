@@ -2,10 +2,12 @@ import classes from "./DetectedEmotions.module.css";
 import Card from "../UI/Card";
 
 const DetectedEmotions = (props) => {
+  const itemKey = Math.floor(Math.random() * 99999999);
+
   return (
     <ul className={classes.list}>
       {props.emotions.map((face) => (
-        <Card className={classes.card}>
+        <Card key={itemKey} className={classes.card}>
           <li>
             <h2>Face Detected </h2>
 

@@ -1,6 +1,5 @@
 .logo {
   position: absolute;
-
   top: -1rem;
   left: 2.3rem;
   width: 12rem;
@@ -19,6 +18,7 @@
   font-size: 16px;
   line-height: 1.5;
   color: #eeeeee;
+  z-index: 2;
 }
 
 .mainContent p {
@@ -38,4 +38,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #166264;
+  background-image: linear-gradient(120deg, #b0ecee, #b0ecee);
 }

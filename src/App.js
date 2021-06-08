@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 import AverageEmotions from "./components/AvergaeEmotions";
 import DetectedEmotions from "./components/DetectedEmotions";
+import EmotionDetector from "./components/Emotion-Detector";
 import Home from "./components/Home/Home";
 import ImageForm from "./components/ImageForm";
 
@@ -69,12 +70,16 @@ function App() {
   return (
     <div className="emotion-detector">
       <Switch>
-        <Route path="/">
+        <Route path="/" exact>
+          <Redirect to="/home" />
+        </Route>
+
+        <Route path="/home">
           <Home />
         </Route>
 
         <Route path="/emotion-detector">
-          <section>
+          <EmotionDetector>
             {submitImage && (
               <ImageForm
                 submitImage={imageSubmissionHandler}
@@ -83,7 +88,7 @@ function App() {
             )}
             {isLoading && (
               <div className="loading-container">
-                <div class="lds-facebook">
+                <div className="lds-facebook">
                   <div></div>
                   <div></div>
                   <div></div>
@@ -102,7 +107,7 @@ function App() {
                 </div>
               </div>
             )}
-          </section>
+          </EmotionDetector>
         </Route>
       </Switch>
     </div>
