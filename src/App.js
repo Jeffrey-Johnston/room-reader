@@ -114,7 +114,6 @@ function App() {
                 <div>
                   <AverageEmotions emotions={emotions} title={title} />
                   <div className="image-container">
-                    {/* <h3>{title}</h3> */}
                     <img
                       className="submitted-image"
                       src={image}
