@@ -5,14 +5,17 @@ import classes from "./ImageForm.module.css";
 
 const ImageForm = (props) => {
   const imageUrlRef = useRef();
+  const titleRef = useRef();
   // const [toBase64, setToBase64] = useState("");
 
   const submitHandler = async (e) => {
     e.preventDefault();
     const imageData = imageUrlRef.current.value;
+    const imageTitle = titleRef.current.value;
 
     props.submitImage(imageData);
     props.setImage(imageData);
+    props.setTitle(imageTitle);
   };
   // const submitHandler = async (e) => {
   //   e.preventDefault();
@@ -47,7 +50,12 @@ const ImageForm = (props) => {
         {/* <img src={toBase64} /> */}
         <h1>Emotion Detecotor</h1>
         <form className={classes.form} onSubmit={submitHandler}>
-          <input type="text" placeholder="Enter image title" required />
+          <input
+            type="text"
+            placeholder="Enter image title"
+            ref={titleRef}
+            required
+          />
           <div className={classes.urlInput}>
             <input
               type="text"

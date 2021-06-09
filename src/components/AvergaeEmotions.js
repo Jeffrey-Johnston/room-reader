@@ -1,4 +1,5 @@
 import Card from "../UI/Card";
+import EmotionKey from "../components/EmotionKey";
 import classes from "./AverageEmotions.module.css";
 
 const AverageEmotions = (props) => {
@@ -82,9 +83,10 @@ const AverageEmotions = (props) => {
   return (
     //! Make Title Dynamic
     <section className={classes.generalData}>
+      <EmotionKey />
       <Card className={classes.card}>
         <div className={classes.titleFaces}>
-          <h1>Project Timeline Pitch</h1>
+          <h1>{`"${props.title}"`}</h1>
           <h2>Faces Detected</h2>
           <p>{faceQty}</p>
           <hr className={classes.line} />

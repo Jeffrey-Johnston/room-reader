@@ -23,9 +23,9 @@
 .backgroundImage {
   position: fixed;
   bottom: 0;
-  left: -20rem;
+  left: -23rem;
   width: auto;
-  height: 50%;
+  height: 450px;
   z-index: -1;
   animation: fade-in 3s ease-in forwards;
 }

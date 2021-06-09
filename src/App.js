@@ -5,6 +5,7 @@ import "./App.css";
 import AverageEmotions from "./components/AvergaeEmotions";
 import DetectedEmotions from "./components/DetectedEmotions";
 import EmotionDetector from "./components/Emotion-Detector";
+
 import Home from "./components/Home/Home";
 import ImageForm from "./components/ImageForm";
 
@@ -12,6 +13,7 @@ function App() {
   const [emotions, setEmotions] = useState([]);
   const [image, setImage] = useState("");
   const [submitImage, setSubmitImage] = useState(true);
+  const [title, setTitle] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
   const imageSubmissionHandler = async (fileInput) => {
@@ -60,6 +62,10 @@ function App() {
 
     setImage(submittedImage);
   };
+  const setTitleHandler = (title) => {
+    let imageTitle = title.toString();
+    setTitle(imageTitle);
+  };
 
   // const testHandler = (data) => {
   //   const img = data;
@@ -88,6 +94,7 @@ function App() {
               <ImageForm
                 submitImage={imageSubmissionHandler}
                 setImage={setImageHandler}
+                setTitle={setTitleHandler}
               />
             )}
             {isLoading && (
@@ -105,8 +112,9 @@ function App() {
               <div className="resposne-data">
                 <button onClick={refresh}>Refresh Page</button>
                 <div>
-                  <AverageEmotions emotions={emotions} />
+                  <AverageEmotions emotions={emotions} title={title} />
                   <div className="image-container">
+                    {/* <h3>{title}</h3> */}
                     <img
                       className="submitted-image"
                       src={image}
