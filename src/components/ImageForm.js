@@ -13,7 +13,7 @@ const ImageForm = (props) => {
     const imageData = imageUrlRef.current.value;
     const imageTitle = titleRef.current.value;
 
-    props.submitImage(imageData);
+    await props.submitImage(imageData);
     props.setImage(imageData);
     props.setTitle(imageTitle);
   };
@@ -65,6 +65,9 @@ const ImageForm = (props) => {
           </div>
           <p className={classes.or}>or</p>
           <div className={classes.fileInput}>
+            <label className={classes.customFileUpload} htmlFor="myFile">
+              Choose Image
+            </label>
             <input
               className={classes.fInput}
               type="file"
