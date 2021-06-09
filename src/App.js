@@ -67,6 +67,10 @@ function App() {
   //   imageSubmissionHandler(img);
   // };
 
+  const refresh = () => {
+    window.location.reload();
+  };
+
   return (
     <div className="emotion-detector">
       <Switch>
@@ -93,18 +97,23 @@ function App() {
                   <div></div>
                   <div></div>
                 </div>
-                <p className="loading">Anylizing Facial</p>
-                <p className="loading"> Expressions</p>
+                {/* <p className="loading">Anylizing Facial</p>
+                <p className="loading"> Expressions</p> */}
               </div>
             )}
             {!submitImage && (
               <div className="resposne-data">
+                <button onClick={refresh}>Refresh Page</button>
                 <div>
                   <AverageEmotions emotions={emotions} />
+                  <div className="image-container">
+                    <img
+                      className="submitted-image"
+                      src={image}
+                      alt="detected"
+                    />
+                  </div>
                   <DetectedEmotions emotions={emotions} />
-                </div>
-                <div className="image-container">
-                  <img className="submitted-image" src={image} alt="detected" />
                 </div>
               </div>
             )}

@@ -131,11 +131,10 @@ const DetectedEmotions = (props) => {
                       : "red"
                   }`}
                 >
-                  {" "}
                   {`Surprised: ${Math.round(face.surprise * 100)}%`}
                 </p>
               )}
-            </li>{" "}
+            </li>
           </Card>
         ))}
       </ul>

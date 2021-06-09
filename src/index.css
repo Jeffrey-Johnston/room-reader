@@ -63,16 +63,16 @@ code {
 }
 
 .red {
-  color: red;
+  color: rgb(212, 41, 41);
 }
 .orange {
-  color: orange;
+  color: rgb(255, 86, 8);
 }
 .yellow {
-  color: yellow;
+  color: rgb(251, 255, 0);
 }
 .green {
-  color: green;
+  color: rgb(43, 197, 43);
 }
 
 .loading-container {
