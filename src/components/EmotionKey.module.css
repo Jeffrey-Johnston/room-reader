@@ -6,14 +6,18 @@
   align-items: center;
 }
 
-.key p {
-  color: white;
-}
-
 .bar {
   margin: 0.25rem;
   width: 25%;
   height: 100%;
+}
+
+.zero {
+  color: rgb(212, 41, 41);
+}
+
+.oneH {
+  color: rgb(43, 197, 43);
 }
 
 .red {
