@@ -14,7 +14,8 @@
   position: absolute;
   cursor: pointer;
   top: -1rem;
-  left: 2.3rem;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 12rem;
   height: auto;
 }
@@ -26,4 +27,16 @@
   width: auto;
   height: 50%;
   z-index: -1;
+  animation: fade-in 3s ease-in forwards;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

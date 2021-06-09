@@ -1,24 +1,74 @@
 .card {
-  width: fit-content;
-  margin: 0 auto;
+  width: 90%;
+  height: fit-content;
+  margin-top: 10rem;
+  padding: 2rem 1rem;
+
+  border-radius: 12px;
+  background-color: #eeeeee;
+}
+
+.titleFaces {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.titleFaces h1 {
+  font-size: 28px;
+  font-weight: 300;
+  height: fit-content;
+  margin-bottom: 1rem;
+}
+
+.titleFaces h2 {
+  margin-bottom: 1rem;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.titleFaces p {
+  font-size: 30px;
+  font-weight: 700;
+}
+
 .statContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .statContainer p {
-  margin: 0 2rem;
+  margin: 0.5rem;
 }
 
 .statContainer h2 {
 }
 
-.faceQty {
-  color: white;
+.line {
+  width: 60%;
+  margin: 1rem 0;
+
+  text-align: center;
+  color: gray;
+}
+
+.avgContainer {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.avg {
+  font-size: 40px;
+}
+
+.textArea {
+  padding: 0.5rem;
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
