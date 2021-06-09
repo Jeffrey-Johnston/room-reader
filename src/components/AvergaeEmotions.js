@@ -80,9 +80,16 @@ const AverageEmotions = (props) => {
     if (props.emotions[i]) faceQty++;
   }
 
+  const refresh = () => {
+    window.location.reload();
+  };
+
   return (
     //! Make Title Dynamic
     <section className={classes.generalData}>
+      <button className={classes.newImage} onClick={refresh}>
+        Scan New Image
+      </button>
       <EmotionKey />
       <Card className={classes.card}>
         <div className={classes.titleFaces}>

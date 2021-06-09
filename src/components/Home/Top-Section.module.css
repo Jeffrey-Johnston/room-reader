@@ -1,6 +1,6 @@
 .logo {
   position: absolute;
-  top: -1rem;
+  top: -2rem;
   left: 2.3rem;
   width: 12rem;
   height: auto;
@@ -10,7 +10,7 @@
   position: absolute;
   width: 210px;
   height: fit-content;
-  margin-top: 9rem;
+  margin-top: 8rem;
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
 }
 
 .mainContent p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .button {

@@ -73,10 +73,6 @@ function App() {
   //   imageSubmissionHandler(img);
   // };
 
-  const refresh = () => {
-    window.location.reload();
-  };
-
   return (
     <div className="emotion-detector">
       <Switch>
@@ -110,7 +106,6 @@ function App() {
             )}
             {!submitImage && (
               <div className="resposne-data">
-                <button onClick={refresh}>Refresh Page</button>
                 <div>
                   <AverageEmotions emotions={emotions} title={title} />
                   <div className="image-container">

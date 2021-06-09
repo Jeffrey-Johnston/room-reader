@@ -13,7 +13,7 @@
 .logo {
   position: absolute;
   cursor: pointer;
-  top: -1rem;
+  top: -2rem;
   left: 50%;
   transform: translate(-50%, 0);
   width: 12rem;
@@ -27,16 +27,4 @@
   width: auto;
   height: 450px;
   z-index: -1;
-  animation: fade-in 3s ease-in forwards;
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
 }
