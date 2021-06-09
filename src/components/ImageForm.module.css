@@ -24,7 +24,7 @@
 .imageForm h1 {
   margin: 0.5rem;
   font-size: 30px;
-  color: gray;
+  color: rgb(165, 165, 165);
 }
 
 .form div {
@@ -34,25 +34,22 @@
   width: 100%;
 }
 
-.form label {
-  margin: 0.5rem 0;
-}
 .form input {
   margin: 0.75rem 0;
   height: 2rem;
   width: fit-content;
   text-align: center;
   font-size: 24px;
-
+  color: rgb(165, 165, 165);
   border: none;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid rgb(165, 165, 165);
   background-color: inherit;
 }
 
 .or {
   margin-bottom: 2rem;
   font-size: 24px;
-  color: gray;
+  color: rgb(165, 165, 165);
 }
 
 .fileInput {

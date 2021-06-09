@@ -1,10 +1,15 @@
+.generalData {
+  padding: 1rem;
+}
+
 .card {
-  width: 90%;
+  width: 100%;
   height: fit-content;
+  margin: 0 auto;
   margin-top: 10rem;
   padding: 2rem 1rem;
   border-radius: 12px;
-  background-color: #50505048;
+  background-color: #272727ce;
   backdrop-filter: blur(5px);
 }
 
@@ -26,7 +31,7 @@
   margin-bottom: 1rem;
   font-size: 24px;
   font-weight: 700;
-  color: gray;
+  color: rgb(165, 165, 165);
 }
 
 .titleFaces p {
@@ -63,7 +68,7 @@
 
 .avg {
   font-size: 50px;
-  color: gray;
+  color: rgb(165, 165, 165);
 }
 
 .textArea {
@@ -72,7 +77,7 @@
   border-radius: 12px;
   font-size: 16px;
   width: 300px;
-  color: gray;
+  color: rgb(165, 165, 165);
   background-color: #0303039f;
 }
 
@@ -89,7 +94,7 @@
   border-radius: 12px;
   font-size: 18px;
   border: none;
-  color: gray;
+  color: rgb(165, 165, 165);
   font-weight: bold;
   background-color: #000000;
   display: flex;
