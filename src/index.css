@@ -76,11 +76,11 @@ code {
 }
 
 .loading-container {
-  /* position: absolute;
-  top: 75%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
-  margin-top: 38rem;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin-top: 38rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,6 +127,18 @@ code {
   }
 }
 
-h3 {
-  color: blue;
+.newImage {
+  position: absolute;
+  left: 50%;
+  top: 8rem;
+  transform: translate(-50%, 0);
+  width: 12rem;
+  height: 3rem;
+  border-radius: 12px;
+  font-size: 18px;
+  border: none;
+  color: #eeeeee;
+  font-weight: bold;
+  background-color: #2ecacf;
+  cursor: pointer;
 }

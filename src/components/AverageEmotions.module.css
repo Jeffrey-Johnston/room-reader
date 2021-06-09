@@ -1,23 +1,6 @@
 .generalData {
   padding: 1rem;
-  margin-top: 7rem;
-}
-
-.newImage {
-  width: 12rem;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  height: 3rem;
-  border-radius: 12px;
-  font-size: 18px;
-  border: none;
-  color: #eeeeee;
-  font-weight: bold;
-  background-color: #2ecacf;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  margin-top: 10rem;
 }
 
 .card {
