@@ -35,10 +35,10 @@ const Description = () => {
           </p>
           <img className={classes.imageIcon} src={imageIcon} alt="directions" />
         </div>
-        <span className={classes.disclaimer}>
-          RoomReader and Luxand do not store or share any of your images
-        </span>
       </section>
+      <p className={classes.disclaimer}>
+        RoomReader and Luxand do not store or share any of your images
+      </p>
     </Fragment>
   );
 };
