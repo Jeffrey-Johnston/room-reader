@@ -28,3 +28,13 @@
   height: 450px;
   z-index: -1;
 }
+
+@media only screen and (min-width: 768px) {
+  .backgroundImage {
+    position: absolute;
+    bottom: 0;
+    left: -8rem;
+    width: auto;
+    height: 75%;
+  }
+}
