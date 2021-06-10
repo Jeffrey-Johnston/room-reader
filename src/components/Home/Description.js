@@ -36,9 +36,9 @@ const Description = () => {
           <img className={classes.imageIcon} src={imageIcon} alt="directions" />
         </div>
       </section>
-      <p className={classes.disclaimer}>
+      {/* <p className={classes.disclaimer}>
         RoomReader and Luxand do not store or share any of your images
-      </p>
+      </p> */}
     </Fragment>
   );
 };
