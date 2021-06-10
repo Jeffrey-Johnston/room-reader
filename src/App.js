@@ -37,6 +37,7 @@ function App() {
       .then((responseData) => {
         let recognizedFaces = [];
         recognizedFaces = responseData.faces;
+        console.log(recognizedFaces);
         const recognizedEmotions = recognizedFaces.map((recognizedFace) => {
           return {
             neutral: recognizedFace.emotions.neutral,

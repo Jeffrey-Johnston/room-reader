@@ -1,6 +1,7 @@
 .generalData {
+  margin-top: 12rem;
+  /* margin-bottom: 1rem; */
   padding: 1rem;
-  margin-top: 10rem;
 }
 
 .card {
