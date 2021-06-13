@@ -20,6 +20,7 @@ const Description = () => {
             alt="directions"
           />
         </div>
+        <hr className={classes.vertcal} width="1" size="200" />
         <div>
           <h2>Step Two</h2>
           <p>
@@ -27,6 +28,7 @@ const Description = () => {
           </p>
           <img className={classes.dataIcon} src={dataIcon} alt="directions" />
         </div>
+        <hr className={classes.vertcal} width="1" size="200" />
         <div>
           <h2>Step Three</h2>
           <p>
@@ -36,9 +38,9 @@ const Description = () => {
           <img className={classes.imageIcon} src={imageIcon} alt="directions" />
         </div>
       </section>
-      {/* <p className={classes.disclaimer}>
+      <p className={classes.disclaimer}>
         RoomReader and Luxand do not store or share any of your images
-      </p> */}
+      </p>
     </Fragment>
   );
 };

@@ -21,7 +21,9 @@ const Home = () => {
           <TopSection className={classes.topSection} />
         </section>
         <section className={classes.descriptionSection}>
-          <Mission />
+          <div className={classes.missionMobile}>
+            <Mission />
+          </div>
           <Description />
         </section>
       </main>

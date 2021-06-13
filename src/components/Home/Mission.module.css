@@ -22,6 +22,7 @@
 
 .mission div {
   width: 100%;
+  max-width: 470px;
   height: fit-content;
   margin: 1rem 0;
 
@@ -46,8 +47,9 @@
 @media only screen and (min-width: 768px) {
   .mission {
     position: absolute;
-    top: 4.25rem;
-    left: 50%;
+    top: 6rem;
+    left: 66%;
+    transform: translate(-50%, 0);
     width: 375px;
     display: flex;
     flex-direction: column;
@@ -63,5 +65,17 @@
 
   .line {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mission {
+    left: 70%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .mission {
+    left: 75%;
   }
 }

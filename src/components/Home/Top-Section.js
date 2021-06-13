@@ -3,6 +3,7 @@ import classes from "./Top-Section.module.css";
 import { Fragment } from "react";
 import { useHistory } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
+import Mission from "../Home/Mission";
 
 const TopSection = () => {
   const history = useHistory();
@@ -29,6 +30,9 @@ const TopSection = () => {
         <button className={classes.button} onClick={startButtonHandler}>
           Get Started
         </button>
+      </div>
+      <div>
+        <Mission />
       </div>
     </Fragment>
   );

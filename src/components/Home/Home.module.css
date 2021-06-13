@@ -30,6 +30,21 @@
 .descriptionSection {
   width: 100%;
   height: 100%;
+  margin-bottom: 1rem;
 }
+
 @media only screen and (min-width: 768px) {
+  .missionMobile {
+    display: none;
+  }
+  .mainSection {
+    padding: 0 5rem;
+  }
+
+  .backgroundImage {
+    left: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
 }
