@@ -3,6 +3,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  min-width: 800px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -133,10 +134,10 @@ code {
 
 .newImage {
   position: absolute;
-  left: 50%;
+  left: 75%;
   top: 8rem;
   transform: translate(-50%, 0);
-  width: 12rem;
+  width: 20rem;
   height: 3rem;
   border-radius: 12px;
   font-size: 18px;
@@ -149,6 +150,7 @@ code {
 
 @media only screen and (min-width: 768px) {
   .avgAndImage {
+    height: fit-content;
     margin-bottom: 1rem;
     padding: 0 5rem;
     display: flex;
@@ -158,6 +160,8 @@ code {
 
   .image-container {
     width: 100%;
+    min-width: 800px;
+    max-height: 600px;
     padding-bottom: 1rem;
   }
 
@@ -169,7 +173,6 @@ code {
   }
 
   .newImage {
-    left: 15.5rem;
-    transform: none;
+    left: 50%;
   }
 }
