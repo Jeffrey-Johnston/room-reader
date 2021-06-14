@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Fragment } from "react";
 import logo from "../assets/images/rr-logo.png";
 import classes from "./ImageForm.module.css";
@@ -6,19 +6,27 @@ import classes from "./ImageForm.module.css";
 const ImageForm = (props) => {
   const imageUrlRef = useRef();
   const titleRef = useRef();
+  const [imageFile, setImageFile] = useState("");
+
+  const imageFileHandler = (e) => {
+    setImageFile(e.target.files[0]);
+  };
 
   const submitHandler = async (e) => {
     e.preventDefault();
     const imageData = imageUrlRef.current.value;
+    const imageTitle = titleRef.current.value;
     if (imageData !== "") {
       props.submitImage(imageData);
       props.setImage(imageData);
+      props.setTitle(imageTitle);
     } else {
-      const file = e.target.files[0];
+      const file = imageFile;
       const convertedFile = await convertToBase64(file);
       const base64 = convertedFile.replace("data:image/jpeg;base64,", "");
       props.submitImage(base64);
       props.setImage(convertedFile);
+      props.setTitle(imageTitle);
     }
   };
 
@@ -60,9 +68,10 @@ const ImageForm = (props) => {
               className={classes.fInput}
               type="file"
               id="myFile"
-              onChange={(e) => {
-                submitHandler(e);
-              }}
+              onChange={imageFileHandler}
+              // onChange={(e) => {
+              //   submitHandler(e);
+              // }}
             />
           </div>
           <div>

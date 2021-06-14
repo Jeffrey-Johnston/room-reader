@@ -65,6 +65,7 @@ function App() {
   };
   const setTitleHandler = (title) => {
     let imageTitle = title.toString();
+    console.log(imageTitle);
     setTitle(imageTitle);
   };
 
