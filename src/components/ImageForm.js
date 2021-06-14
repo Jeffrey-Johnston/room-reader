@@ -17,9 +17,11 @@ const ImageForm = (props) => {
   //   props.setImage(imageData);
   //   props.setTitle(imageTitle);
   // };
+
   const submitHandler = async (e) => {
     e.preventDefault();
     const imageData = imageUrlRef.current.value;
+    console.log(imageData);
     if (imageData !== "") {
       props.submitImage(imageData);
       props.setImage(imageData);
