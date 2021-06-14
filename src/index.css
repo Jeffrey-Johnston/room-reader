@@ -134,10 +134,10 @@ code {
 }
 
 .newImage {
-  position: absolute;
+  /* position: absolute;
   left: 50%;
   top: 8rem;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0); */
   width: 20rem;
   height: 3rem;
   border-radius: 12px;
@@ -152,27 +152,34 @@ code {
 @media only screen and (min-width: 768px) {
   .avgAndImage {
     height: fit-content;
+    margin-top: 6rem;
     margin-bottom: 1rem;
     padding: 0 5rem;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
   }
 
   .image-container {
     width: 100%;
     max-height: 600px;
+    margin-top: 3rem;
     padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .submitted-image {
     width: 100%;
     height: auto;
+    max-height: 500px;
     object-fit: cover;
     border-radius: 12px;
   }
 
   .newImage {
-    left: 50%;
+    top: 5rem;
+    left: 62.33%;
   }
 }

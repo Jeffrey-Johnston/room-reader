@@ -113,13 +113,12 @@ function App() {
             {!submitImage && (
               <div>
                 <div className="resposne-data">
-                  <button className="newImage" onClick={refresh}>
-                    Scan New Image
-                  </button>
-                  ;
                   <div className="avgAndImage">
                     <AverageEmotions emotions={emotions} title={title} />
                     <div className="image-container">
+                      <button className="newImage" onClick={refresh}>
+                        Scan New Image
+                      </button>
                       <img
                         className="submitted-image"
                         src={image}
