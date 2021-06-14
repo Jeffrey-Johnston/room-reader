@@ -8,40 +8,42 @@ const ImageForm = (props) => {
   const titleRef = useRef();
   // const [toBase64, setToBase64] = useState("");
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
-    const imageData = imageUrlRef.current.value;
-    const imageTitle = titleRef.current.value;
-
-    await props.submitImage(imageData);
-    props.setImage(imageData);
-    props.setTitle(imageTitle);
-  };
   // const submitHandler = async (e) => {
   //   e.preventDefault();
   //   const imageData = imageUrlRef.current.value;
-  //   if (imageData !== "") {
-  //     props.submitImage(imageData);
-  //     props.setImage(imageData);
-  //   }  else {
-  //     const file = e.target.files[0];
-  //     const base64 = await convertToBase64(file);
-  //     console.log(base64);
-  //     props.submitImage(base64);
-  //     // setToBase64(base64);
-  //   }
-  // };
+  //   const imageTitle = titleRef.current.value;
 
-  // const convertToBase64 = (file) => {
-  //   return new Promise((resolve) => {
-  //     const fileReader = new FileReader();
-  //     fileReader.readAsDataURL(file);
-
-  //     fileReader.onload = () => {
-  //       resolve(fileReader.result);
-  //     };
-  //   });
+  //   await props.submitImage(imageData);
+  //   props.setImage(imageData);
+  //   props.setTitle(imageTitle);
   // };
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    const imageData = imageUrlRef.current.value;
+    if (imageData !== "") {
+      props.submitImage(imageData);
+      props.setImage(imageData);
+    } else {
+      const file = e.target.files[0];
+      const convertedFile = await convertToBase64(file);
+      // console.log(convertedFile);
+      const base64 = convertedFile.replace("data:image/jpeg;base64,", "");
+
+      props.submitImage(base64);
+      // setToBase64(base64);
+    }
+  };
+
+  const convertToBase64 = (file) => {
+    return new Promise((resolve) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
+    });
+  };
 
   return (
     <Fragment>
