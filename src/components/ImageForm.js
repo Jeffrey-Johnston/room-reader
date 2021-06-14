@@ -6,33 +6,19 @@ import classes from "./ImageForm.module.css";
 const ImageForm = (props) => {
   const imageUrlRef = useRef();
   const titleRef = useRef();
-  // const [toBase64, setToBase64] = useState("");
-
-  // const submitHandler = async (e) => {
-  //   e.preventDefault();
-  //   const imageData = imageUrlRef.current.value;
-  //   const imageTitle = titleRef.current.value;
-
-  //   await props.submitImage(imageData);
-  //   props.setImage(imageData);
-  //   props.setTitle(imageTitle);
-  // };
 
   const submitHandler = async (e) => {
     e.preventDefault();
     const imageData = imageUrlRef.current.value;
-    console.log(imageData);
     if (imageData !== "") {
       props.submitImage(imageData);
       props.setImage(imageData);
     } else {
       const file = e.target.files[0];
       const convertedFile = await convertToBase64(file);
-      // console.log(convertedFile);
       const base64 = convertedFile.replace("data:image/jpeg;base64,", "");
-
       props.submitImage(base64);
-      // setToBase64(base64);
+      props.setImage(convertedFile);
     }
   };
 
@@ -40,7 +26,6 @@ const ImageForm = (props) => {
     return new Promise((resolve) => {
       const fileReader = new FileReader();
       fileReader.readAsDataURL(file);
-
       fileReader.onload = () => {
         resolve(fileReader.result);
       };
@@ -51,7 +36,6 @@ const ImageForm = (props) => {
     <Fragment>
       <section className={classes.imageForm}>
         <img className={classes.logo} src={logo} alt="logo" />
-        {/* <img src={toBase64} /> */}
         <h1>Emotion Detecotor</h1>
         <form className={classes.form} onSubmit={submitHandler}>
           <input
