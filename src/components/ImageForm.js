@@ -4,9 +4,13 @@ import logo from "../assets/images/rr-logo.png";
 import classes from "./ImageForm.module.css";
 
 const ImageForm = (props) => {
-  const imageUrlRef = useRef();
   const titleRef = useRef();
   const [imageFile, setImageFile] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+
+  const imageUrlHandler = (e) => {
+    setImageUrl(e.target.value);
+  };
 
   const imageFileHandler = (e) => {
     setImageFile(e.target.files[0]);
@@ -14,13 +18,13 @@ const ImageForm = (props) => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    const imageData = imageUrlRef.current.value;
     const imageTitle = titleRef.current.value;
-    if (imageData !== "") {
-      props.submitImage(imageData);
-      props.setImage(imageData);
+
+    if (imageUrl !== "") {
+      props.submitImage(imageUrl);
+      props.setImage(imageUrl);
       props.setTitle(imageTitle);
-    } else {
+    } else if (imageFile !== "") {
       const file = imageFile;
       const convertedFile = await convertToBase64(file);
       const base64 = convertedFile.replace("data:image/jpeg;base64,", "");
@@ -56,7 +60,7 @@ const ImageForm = (props) => {
             <input
               type="text"
               placeholder="Enter image url"
-              ref={imageUrlRef}
+              onChange={imageUrlHandler}
             />
           </div>
           <p className={classes.or}>or</p>
@@ -69,11 +73,9 @@ const ImageForm = (props) => {
               type="file"
               id="myFile"
               onChange={imageFileHandler}
-              // onChange={(e) => {
-              //   submitHandler(e);
-              // }}
             />
           </div>
+
           <div>
             <button type="submit">Detect Emotion</button>
           </div>

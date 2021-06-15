@@ -15,6 +15,7 @@ function App() {
   const [submitImage, setSubmitImage] = useState(true);
   const [title, setTitle] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const imageSubmissionHandler = async (fileInput) => {
     setIsLoading(true);
@@ -38,22 +39,28 @@ function App() {
         let recognizedFaces = [];
         recognizedFaces = responseData.faces;
         console.log(recognizedFaces);
-        const recognizedEmotions = recognizedFaces.map((recognizedFace) => {
-          return {
-            neutral: recognizedFace.emotions.neutral,
-            confused: recognizedFace.emotions.confused,
-            happiness: recognizedFace.emotions.happiness,
-            contempt: recognizedFace.emotions.contempt,
-            anger: recognizedFace.emotions.anger,
-            fear: recognizedFace.emotions.fear,
-            disgust: recognizedFace.emotions.disgust,
-            sadness: recognizedFace.emotions.sadness,
-            surprise: recognizedFace.emotions.surprise,
-          };
-        });
-        setEmotions(recognizedEmotions);
-        setIsLoading(false);
-        setSubmitImage(false);
+        if (recognizedFaces === undefined) {
+          setError(true);
+          setIsLoading(false);
+        } else {
+          const recognizedEmotions = recognizedFaces.map((recognizedFace) => {
+            return {
+              neutral: recognizedFace.emotions.neutral,
+              confused: recognizedFace.emotions.confused,
+              happiness: recognizedFace.emotions.happiness,
+              contempt: recognizedFace.emotions.contempt,
+              anger: recognizedFace.emotions.anger,
+              fear: recognizedFace.emotions.fear,
+              disgust: recognizedFace.emotions.disgust,
+              sadness: recognizedFace.emotions.sadness,
+              surprise: recognizedFace.emotions.surprise,
+            };
+          });
+          setEmotions(recognizedEmotions);
+          setIsLoading(false);
+          setSubmitImage(false);
+          setError(false);
+        }
       })
       .catch((error) => console.log("error", error));
   };
@@ -68,12 +75,6 @@ function App() {
     console.log(imageTitle);
     setTitle(imageTitle);
   };
-
-  // const testHandler = (data) => {
-  //   const img = data;
-  //   console.log(img);
-  //   imageSubmissionHandler(img);
-  // };
 
   const refresh = () => {
     window.location.reload();
@@ -92,6 +93,12 @@ function App() {
 
         <Route path="/emotion-detector">
           <EmotionDetector>
+            {error && (
+              <div className="error">
+                <p>Invalid image format</p>
+                <p>Please use a valid url address, pdf file, or jpg file.</p>
+              </div>
+            )}
             {submitImage && (
               <ImageForm
                 submitImage={imageSubmissionHandler}
@@ -106,8 +113,8 @@ function App() {
                   <div></div>
                   <div></div>
                 </div>
-                {/* <p className="loading">Anylizing Facial</p>
-                <p className="loading"> Expressions</p> */}
+                <p className="loading">Anylizing Facial</p>
+                <p className="loading"> Expressions</p>
               </div>
             )}
             {!submitImage && (
