@@ -2,6 +2,7 @@
   "name": "redux-template-emotion",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://api.luxand.cloud/photo/emotions",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
