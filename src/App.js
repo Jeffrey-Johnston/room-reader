@@ -99,7 +99,6 @@ function App() {
                 <p>Please use a valid url address, pdf file, or jpg file.</p>
               </div>
             )}
-            <img src={image} alt="" />
             {submitImage && (
               <ImageForm
                 submitImage={imageSubmissionHandler}
