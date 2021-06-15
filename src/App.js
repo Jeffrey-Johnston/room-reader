@@ -113,8 +113,8 @@ function App() {
                   <div></div>
                   <div></div>
                 </div>
-                <p className="loading">Anylizing Facial</p>
-                <p className="loading"> Expressions</p>
+                {/* <p className="loading">Anylizing Facial</p>
+                <p className="loading"> Expressions</p> */}
               </div>
             )}
             {!submitImage && (
