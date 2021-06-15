@@ -23,7 +23,7 @@ const ImageForm = (props) => {
       props.submitImage(imageUrl);
       props.setImage(imageUrl);
       props.setTitle(imageTitle);
-    } else if (imageFile.includes("data:image/jpeg;base64,")) {
+    } else if (imageFile) {
       const file = imageFile;
       const convertedFile = await convertToBase64(file);
       const base64 = convertedFile.replace("data:image/jpeg;base64,", "");
