@@ -6,10 +6,10 @@
 
 .card {
   width: 100%;
-  max-width: 425px;
+  max-width: 375px;
   height: fit-content;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
   border-radius: 12px;
   background-color: #272727ce;
   backdrop-filter: blur(5px);
@@ -102,5 +102,6 @@
 @media only screen and (min-width: 768px) {
   .generalData {
     margin-top: 0;
+    padding: 0;
   }
 }
