@@ -18,6 +18,7 @@ function App() {
   const [error, setError] = useState(false);
 
   const imageSubmissionHandler = async (fileInput) => {
+    console.log(fileInput);
     setIsLoading(true);
     var myHeaders = new Headers();
     myHeaders.append("token", process.env.REACT_APP_GOOGLE_API_KEY);
