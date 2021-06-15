@@ -9,6 +9,7 @@ const EmotionDetector = (props) => {
 
   const homeRouteHandler = () => {
     history.push("/home");
+    window.location.reload();
   };
 
   return (

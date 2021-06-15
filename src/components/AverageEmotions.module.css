@@ -8,8 +8,11 @@
   width: 100%;
   max-width: 375px;
   height: fit-content;
+  min-height: 480px;
   margin: 0 auto;
-  /* padding: 2rem 1rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   border-radius: 12px;
   background-color: #272727ce;
   backdrop-filter: blur(5px);
@@ -44,7 +47,7 @@
 
 .line {
   width: 60%;
-  margin: 1rem 0;
+  margin-top: 1rem;
   height: 1px;
   text-align: center;
   background-color: rgb(77, 77, 77);
@@ -56,7 +59,7 @@
 }
 
 .avgContainer {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -101,7 +104,7 @@
 
 @media only screen and (min-width: 768px) {
   .generalData {
-    margin-top: 0;
+    margin: 0;
     padding: 0;
   }
 }
