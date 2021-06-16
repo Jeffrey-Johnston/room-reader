@@ -161,13 +161,14 @@ code {
 
 @media only screen and (min-width: 768px) {
   .newImageMobile {
-    display: none;
+    /* display: none; */
+    top: 8rem;
   }
 
   .avgAndImage {
     width: 100%;
     height: fit-content;
-    margin-top: 8.33rem;
+    margin-top: 12rem;
     margin-bottom: 1rem;
     padding: 0 2rem;
     display: flex;
@@ -188,13 +189,13 @@ code {
 
   .submitted-image {
     width: 100%;
-    height: 480px;
+    height: 520px;
     /* padding: 0 2rem; */
     max-height: 500px;
     object-fit: cover;
     border-radius: 12px;
   }
-
+  /* 
   .newImageDesktop {
     width: 20rem;
     height: 3rem;
@@ -210,5 +211,5 @@ code {
     font-weight: bold;
     background-color: #2ecacf;
     cursor: pointer;
-  }
+  } */
 }

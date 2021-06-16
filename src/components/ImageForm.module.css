@@ -108,3 +108,9 @@
   color: #166264;
   background-image: linear-gradient(120deg, #b0ecee, #b0ecee);
 }
+
+@media only screen and (max-height: 610px) {
+  .imageForm {
+    top: 23rem;
+  }
+}

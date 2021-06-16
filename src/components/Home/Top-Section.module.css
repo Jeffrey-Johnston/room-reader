@@ -1,7 +1,7 @@
 .logo {
   position: absolute;
   top: -2rem;
-  left: 2.3rem;
+  left: 2.66rem;
   width: 12rem;
   height: auto;
 }
@@ -48,4 +48,7 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .logo {
+    left: 7.75rem;
+  }
 }
