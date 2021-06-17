@@ -62,6 +62,9 @@ function App() {
           setSubmitImage(false);
           setError(false);
         }
+        setTimeout(() => {
+          setError(false);
+        }, 5000);
       })
       .catch((error) => console.log("error", error));
   };

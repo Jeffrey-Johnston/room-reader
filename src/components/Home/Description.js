@@ -14,11 +14,7 @@ const Description = () => {
             Upload a pdf file, jpg file or image URL address, and give your
             image a title
           </p>
-          <img
-            className={classes.uploadIcon}
-            src={uploadIcon}
-            alt="directions"
-          />
+          <img className={classes.imageIcon} src={imageIcon} alt="directions" />
         </div>
         <hr className={classes.vertcal} width="1" size="200" />
         <div>
@@ -35,7 +31,11 @@ const Description = () => {
             Export your emotion statistics and notes to store for future
             reference
           </p>
-          <img className={classes.imageIcon} src={imageIcon} alt="directions" />
+          <img
+            className={classes.uploadIcon}
+            src={uploadIcon}
+            alt="directions"
+          />
         </div>
       </section>
       <p className={classes.disclaimer}>

@@ -5,27 +5,34 @@
   transform: translate(-50%, -60%);
   width: 90%;
   max-width: 475px;
-  height: 400px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   padding: 0.5rem 0;
   border-radius: 12px;
-  background-color: #eeeeee;
+  /* background-color: #eeeeee; */
+  background-color: #272727ce;
+  backdrop-filter: blur(5px);
 }
 
 .logo {
-  margin: 0;
-  padding: 0;
   width: 7rem;
   height: auto;
 }
 
 .imageForm h1 {
-  margin: 0.5rem;
+  margin: 1rem;
   font-size: 30px;
-  color: rgb(165, 165, 165);
+  /* color: rgb(165, 165, 165); */
+  color: #eeeeee;
+}
+
+.imageOptions {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .form div {
@@ -36,14 +43,14 @@
 }
 
 .form input {
-  margin: 0.75rem 0;
+  margin: 1rem 0;
   height: 2rem;
   width: fit-content;
   text-align: center;
   font-size: 24px;
   color: rgb(165, 165, 165);
   border: none;
-  border-bottom: 1px solid rgb(165, 165, 165);
+  border-bottom: 1px solid #eeeeee;
   background-color: inherit;
 }
 
@@ -64,49 +71,68 @@
   position: absolute;
   font-size: 20px;
   border: none;
+  color: #eeeeee;
 }
 
 .fileInput input[type="file"] {
   display: none;
 }
+
 .customFileUpload {
   width: 12rem;
   margin: 0 auto;
   height: 2rem;
   border-radius: 12px;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: bold;
   border: none;
-  color: rgb(165, 165, 165);
+  color: #eeeeee;
   font-weight: 300;
-  background-color: #272727ce;
+  background-color: #2ecacf;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 
-.form button {
+.imageForm button {
   width: 16rem;
   margin: 0 auto;
   margin-top: 1rem;
-  height: 3rem;
+  padding: 1rem 2rem;
+  height: 5rem;
   border-radius: 12px;
   font-size: 18px;
   border: none;
   color: #eeeeee;
   font-weight: bold;
-  background-image: linear-gradient(120deg, #28d5db, #2ecacf, #28d5db, #b0ecee);
+  background-color: #2ecacf;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 
-.form button:hover,
-.form button:active {
-  color: #166264;
-  background-image: linear-gradient(120deg, #b0ecee, #b0ecee);
+.imageForm button:hover,
+.imageForm button:active {
+  color: #2ecacf;
+  background-color: #eeeeee;
+}
+
+.imageIcon {
+  height: 5rem;
+  width: 5rem;
+}
+
+.fileError {
+  color: red;
+}
+
+.disclaimer {
+  margin: 2rem 3rem 0.25rem 3rem;
+  font-size: 16px;
+  text-align: center;
+  color: gray;
 }
 
 @media only screen and (max-height: 610px) {
