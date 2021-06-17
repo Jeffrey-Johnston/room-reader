@@ -164,8 +164,8 @@ input {
   }
 }
 
-@media only screen and (max-height: 675px) {
+/* @media only screen and (max-height: 675px) {
   .imageForm {
     top: 28rem;
   }
-}
+} */
