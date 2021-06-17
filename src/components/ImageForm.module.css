@@ -48,7 +48,7 @@
   width: fit-content;
   text-align: center;
   font-size: 24px;
-  color: rgb(165, 165, 165);
+  color: #eeeeee;
   border: none;
   border-bottom: 1px solid #eeeeee;
   background-color: inherit;
@@ -111,12 +111,14 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-.imageForm button:hover,
-.imageForm button:active {
+.imageForm button:hover {
+  width: 20rem;
+
   color: #2ecacf;
-  background-color: #eeeeee;
+  background-color: #eeeeee3b;
 }
 
 .imageIcon {

@@ -40,9 +40,11 @@
   align-items: center;
   cursor: pointer;
   animation: fade-in 2s ease-in forwards;
+  transition: 0.5s ease-in;
 }
 
 .button:hover {
+  width: 13rem;
   color: #2ecacf;
   background-image: linear-gradient(#eeeeee, #eeeeee);
 }
