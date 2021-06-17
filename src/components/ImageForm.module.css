@@ -1,8 +1,8 @@
 .imageForm {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 10rem;
+  transform: translate(-50%, 0);
   width: 90%;
   max-width: 475px;
   height: fit-content;
@@ -154,6 +154,7 @@ input {
 @media only screen and (min-width: 768px) {
   .imageForm {
     top: 28rem;
+    transform: translate(-50%, -50%);
   }
 
   .imageForm button:hover,
