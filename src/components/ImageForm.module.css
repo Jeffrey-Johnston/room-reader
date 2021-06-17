@@ -134,6 +134,7 @@
   .imageForm button:hover,
   .imageForm button:active {
     width: 20rem;
+
     color: #2ecacf;
     background-color: #eeeeee3b;
   }
