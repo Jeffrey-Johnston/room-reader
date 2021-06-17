@@ -26,7 +26,7 @@
 }
 
 .button {
-  width: 10rem;
+  width: 100%;
   margin: 0 auto;
   height: 3rem;
   border-radius: 12px;
@@ -34,7 +34,7 @@
   border: none;
   color: #eeeeee;
   font-weight: bold;
-  background-image: linear-gradient(120deg, #28d5db, #2ecacf, #28d5db, #b0ecee);
+  background-color: #28d5db;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,10 +43,19 @@
   transition: 0.5s ease-in;
 }
 
-.button:hover {
+.hover {
+  margin: 0 auto;
+  width: 10rem;
+  animation: fade-in 2s ease-in forwards;
+  transition: 0.4s ease-in;
+}
+.hover:hover {
   width: 13rem;
+}
+
+.button:hover {
   color: #2ecacf;
-  background-image: linear-gradient(#eeeeee, #eeeeee);
+  background-color: #eeeeee;
 }
 
 @media only screen and (min-width: 768px) {

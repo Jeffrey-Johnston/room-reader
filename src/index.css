@@ -11,7 +11,13 @@ body {
   overflow-y: auto;
 }
 .error {
-  color: red;
+  position: absolute;
+  left: 50%;
+  top: 7rem;
+  transform: translate(-50%, 0);
+  text-align: center;
+  font-size: 18px;
+  color: rgb(212, 41, 41);
 }
 
 /* width */
@@ -54,7 +60,9 @@ code {
 
 .loading {
   text-align: center;
-  color: #eeeeee;
+  color: #2ecacf;
+  font-size: 24px;
+  /* margin-bottom: 1rem; */
 }
 
 .image-container {
@@ -89,10 +97,13 @@ code {
 }
 
 .loading-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000ed;
   position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
+  /* transform: translate(-50%, -50%); */
   /* margin-top: 38rem; */
   display: flex;
   flex-direction: column;
@@ -196,6 +207,7 @@ code {
     object-fit: cover;
     border-radius: 12px;
   }
+
   /* 
   .newImageDesktop {
     width: 20rem;

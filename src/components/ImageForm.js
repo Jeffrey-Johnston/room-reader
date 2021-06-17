@@ -131,11 +131,14 @@ const ImageForm = (props) => {
                 <p className={classes.fileError}>Please select an image</p>
               )}
               {imageFile !== "" && (
-                <img
-                  className={classes.imageIcon}
-                  src={imageIcon}
-                  alt="directions"
-                />
+                <div>
+                  <img
+                    className={classes.imageIcon}
+                    src={imageIcon}
+                    alt="directions"
+                  />
+                  <p className={classes.fileSelected}>File Selected</p>
+                </div>
               )}
             </div>
           )}
@@ -143,7 +146,9 @@ const ImageForm = (props) => {
           {!options && (
             <div>
               <button type="submit">Detect Emotion</button>
-              <p onClick={reset}>Reset</p>
+              <p className={classes.reset} onClick={reset}>
+                Go Back
+              </p>
             </div>
           )}
         </form>

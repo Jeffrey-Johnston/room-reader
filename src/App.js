@@ -99,8 +99,8 @@ function App() {
           <EmotionDetector>
             {error && (
               <div className="error">
-                <p>Invalid image format</p>
-                <p>Please use a valid url address, pdf file, or jpg file.</p>
+                <p>Invalid image format.</p>
+                <p>Please use a valid url address, pdf, or jpeg file.</p>
               </div>
             )}
             {submitImage && (
@@ -112,13 +112,13 @@ function App() {
             )}
             {isLoading && (
               <div className="loading-container">
+                <p className="loading">Anylizing Facial</p>
+                <p className="loading"> Expressions</p>
                 <div className="lds-facebook">
                   <div></div>
                   <div></div>
                   <div></div>
                 </div>
-                {/* <p className="loading">Anylizing Facial</p>
-                <p className="loading"> Expressions</p> */}
               </div>
             )}
             {!submitImage && (

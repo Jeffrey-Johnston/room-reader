@@ -25,7 +25,6 @@
   max-width: 470px;
   height: fit-content;
   margin: 1rem 0;
-
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -60,7 +59,7 @@
   }
 
   .mission div {
-    margin: 0;
+    margin: 0.25rem;
   }
 
   .line {

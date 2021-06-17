@@ -27,9 +27,11 @@ const TopSection = () => {
           Calculate emotional responses for focus groups, presentations and
           more…
         </p>
-        <button className={classes.button} onClick={startButtonHandler}>
-          Get Started
-        </button>
+        <div className={classes.hover}>
+          <button className={classes.button} onClick={startButtonHandler}>
+            Get Started
+          </button>
+        </div>
       </div>
       <div>
         <Mission />

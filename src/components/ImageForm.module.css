@@ -26,7 +26,6 @@
 .imageForm h1 {
   margin: 1rem;
   font-size: 30px;
-  /* color: rgb(165, 165, 165); */
   color: #eeeeee;
 }
 
@@ -49,6 +48,7 @@ input {
   width: fit-content;
   text-align: center;
   font-size: 24px;
+  font-weight: 100;
   color: #eeeeee;
   border: none;
   border-radius: none;
@@ -69,12 +69,13 @@ input {
   justify-content: center;
 }
 
-.fileInput input {
+/* .fileInput input {
   position: absolute;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 300;
   border: none;
   color: #eeeeee;
-}
+} */
 
 .fileInput input[type="file"] {
   display: none;
@@ -82,7 +83,7 @@ input {
 
 .customFileUpload {
   width: 12rem;
-  margin: 0 auto;
+  margin: 0rem auto;
   height: 2rem;
   border-radius: 12px;
   font-size: 18px;
@@ -90,7 +91,7 @@ input {
   border: none;
   color: #eeeeee;
   font-weight: 300;
-  background-color: #2ecacf;
+  background-color: rgba(165, 165, 165, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,7 +99,7 @@ input {
 }
 
 .imageForm button {
-  width: 16rem;
+  width: 15rem;
   margin: 0 auto;
   margin-top: 1rem;
   padding: 1rem 2rem;
@@ -121,8 +122,14 @@ input {
   width: 5rem;
 }
 
+.fileSelected {
+  font-size: 18px;
+  color: rgb(165, 165, 165);
+}
+
 .fileError {
-  color: red;
+  font-size: 18px;
+  color: rgb(212, 41, 41);
 }
 
 .disclaimer {
@@ -132,17 +139,32 @@ input {
   color: gray;
 }
 
+.reset {
+  margin-top: 2rem;
+  font-size: 20px;
+  color: #2ecacf;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.reset:hover {
+  color: #eeeeee;
+}
+
 @media only screen and (min-width: 768px) {
+  .imageForm {
+    top: 28rem;
+  }
+
   .imageForm button:hover,
   .imageForm button:active {
-    width: 20rem;
     color: #2ecacf;
     background-color: #eeeeee3b;
   }
 }
 
-@media only screen and (max-height: 610px) {
+@media only screen and (max-height: 675px) {
   .imageForm {
-    top: 23rem;
+    top: 28rem;
   }
 }
