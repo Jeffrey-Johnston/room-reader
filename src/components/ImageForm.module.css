@@ -1,7 +1,7 @@
 .imageForm {
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 25rem;
   transform: translate(-50%, -60%);
   width: 90%;
   max-width: 475px;
