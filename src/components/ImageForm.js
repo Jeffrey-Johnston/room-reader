@@ -66,6 +66,12 @@ const ImageForm = (props) => {
     setOptions(false);
   };
 
+  const reset = () => {
+    setOptions(true);
+    setFileOption(false);
+    setUrlOption(false);
+  };
+
   return (
     <Fragment>
       <section className={classes.imageForm}>
@@ -124,17 +130,20 @@ const ImageForm = (props) => {
               {imageFileError && (
                 <p className={classes.fileError}>Please select an image</p>
               )}
-              <img
-                className={classes.imageIcon}
-                src={imageIcon}
-                alt="directions"
-              />
+              {imageFile !== "" && (
+                <img
+                  className={classes.imageIcon}
+                  src={imageIcon}
+                  alt="directions"
+                />
+              )}
             </div>
           )}
 
           {!options && (
             <div>
               <button type="submit">Detect Emotion</button>
+              <p onClick={reset}>Reset</p>
             </div>
           )}
         </form>
