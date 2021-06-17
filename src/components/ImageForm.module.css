@@ -51,6 +51,7 @@
   font-size: 24px;
   color: #eeeeee;
   border: none;
+  border-radius: none;
   border-bottom: 1px solid #eeeeee;
   background-color: inherit;
 }
