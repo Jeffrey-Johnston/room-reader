@@ -130,11 +130,10 @@
   color: gray;
 }
 
-@media only screen and (mid-width: 768px) {
+@media only screen and (min-width: 768px) {
   .imageForm button:hover,
   .imageForm button:active {
     width: 20rem;
-
     color: #2ecacf;
     background-color: #eeeeee3b;
   }
