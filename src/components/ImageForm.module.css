@@ -43,7 +43,7 @@
   width: 100%;
 }
 
-.form input {
+input {
   margin: 1rem 0;
   height: 2rem;
   width: fit-content;
