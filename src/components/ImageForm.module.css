@@ -1,8 +1,8 @@
 .imageForm {
   position: absolute;
   left: 50%;
-  top: 25rem;
-  transform: translate(-50%, -60%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 90%;
   max-width: 475px;
   height: fit-content;
@@ -114,7 +114,8 @@
   transition: 0.3s ease-in-out;
 }
 
-.imageForm button:hover {
+.imageForm button:hover,
+.imageForm button:active {
   width: 20rem;
 
   color: #2ecacf;
