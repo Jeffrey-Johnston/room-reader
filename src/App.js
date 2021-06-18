@@ -130,9 +130,6 @@ function App() {
                   <div className="avgAndImage">
                     <AverageEmotions emotions={emotions} title={title} />
                     <div className="image-container">
-                      <button className="newImageDesktop" onClick={refresh}>
-                        Scan New Image
-                      </button>
                       <img
                         className="submitted-image"
                         src={image}

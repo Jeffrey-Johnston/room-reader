@@ -55,26 +55,29 @@
     align-items: center;
     padding: 1rem;
     border-radius: 12px;
-    background-color: #eeeeee;
+    /* background-color: #eeeeee; */
+    background-color: #272727ce;
+    backdrop-filter: blur(5px);
   }
 
   .mission div {
     margin: 0.25rem;
   }
 
+  .h2 {
+    color: #eeeeee;
+  }
+  .mission p {
+    color: rgb(165, 165, 165);
+  }
+
   .line {
     display: none;
   }
 }
-
-@media only screen and (min-width: 768px) {
-  .mission {
-    left: 70%;
-  }
-}
-
+/* 
 @media only screen and (min-width: 1024px) {
   .mission {
     left: 75%;
   }
-}
+} */
