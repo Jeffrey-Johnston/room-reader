@@ -1,8 +1,23 @@
 import Card from "../UI/Card";
 import EmotionKey from "../components/EmotionKey";
 import classes from "./AverageEmotions.module.css";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const AverageEmotions = (props) => {
+  const divToDisplay = document.getElementById("pdfComponent");
+  console.log(divToDisplay);
+  const exportPdf = () => {
+    html2canvas(divToDisplay).then(function (canvas) {
+      const divImage = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("p", "mm", "a4");
+      var width = pdf.internal.pageSize.getWidth();
+      var height = pdf.internal.pageSize.getHeight();
+      pdf.addImage(divImage, "PNG", 0, 0, width, height);
+      pdf.save(`${props.title}-emotion-stats.pdf`);
+    });
+  };
+
   const neutralFaces = props.emotions.map((face) => {
     return face.neutral;
   });
@@ -82,7 +97,7 @@ const AverageEmotions = (props) => {
 
   return (
     //! Make Title Dynamic
-    <section className={classes.generalData}>
+    <section className={classes.generalData} id="pdfComponent">
       <EmotionKey />
       <Card className={classes.card}>
         <div className={classes.titleFaces}>
@@ -243,7 +258,9 @@ const AverageEmotions = (props) => {
             />
           </form>
 
-          <button type="button">Exports as pdf</button>
+          <button type="button" onClick={exportPdf}>
+            Exports as pdf
+          </button>
         </div>
       </Card>
     </section>
