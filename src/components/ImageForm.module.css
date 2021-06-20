@@ -11,6 +11,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+
   padding: 0.5rem 0;
   border-radius: 12px;
   /* background-color: #eeeeee; */
@@ -152,10 +153,9 @@ input {
 }
 
 @media only screen and (min-width: 768px) {
-  /* .imageForm {
-    top: 28rem;
-    transform: translate(-50%, -50%);
-  } */
+  .imageForm {
+    margin-bottom: 5rem;
+  }
 
   .imageForm button:hover,
   .imageForm button:active {
