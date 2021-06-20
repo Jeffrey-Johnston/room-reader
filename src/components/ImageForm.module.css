@@ -152,10 +152,10 @@ input {
 }
 
 @media only screen and (min-width: 768px) {
-  .imageForm {
+  /* .imageForm {
     top: 28rem;
     transform: translate(-50%, -50%);
-  }
+  } */
 
   .imageForm button:hover,
   .imageForm button:active {

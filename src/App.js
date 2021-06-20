@@ -112,7 +112,7 @@ function App() {
             )}
             {isLoading && (
               <div className="loading-container">
-                <p className="loading">Anylizing Facial</p>
+                <p className="loading">Analyzing Facial</p>
                 <p className="loading"> Expressions</p>
                 <div className="lds-facebook">
                   <div></div>
