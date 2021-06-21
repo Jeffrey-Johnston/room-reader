@@ -10,26 +10,47 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-.error {
+.errorDiv {
   width: 100vw;
   height: 100vh;
   background-color: #000000ed;
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 2;
+}
+
+.error {
+  position: absolute;
+  left: 50%;
+  top: 10rem;
+  transform: translate(-50%, 0);
+  width: 90%;
+  max-width: 475px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
-  font-size: 18px;
-  color: rgb(212, 41, 41);
-  overflow: hidden;
-  z-index: 2;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  border-radius: 12px;
+  /* background-color: #eeeeee; */
+  background-color: #272727ce;
+}
+
+.error h2 {
+  margin: 0.5rem 0;
+  color: #eeeeee;
+}
+
+.error p {
+  margin: 0.5rem 0;
+  color: rgb(165, 165, 165);
 }
 
 .errorBar {
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
   height: 0.5rem;
   width: 200px;
   background-color: rgb(212, 41, 41);

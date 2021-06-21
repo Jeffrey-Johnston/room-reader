@@ -1,4 +1,3 @@
-import { classes } from "istanbul-lib-coverage";
 import React, { useState } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 
@@ -99,10 +98,12 @@ function App() {
         <Route path="/emotion-detector">
           <EmotionDetector>
             {error && (
-              <div className="error">
-                <p>Invalid image format.</p>
-                <p>Please use a valid url address, pdf, or jpeg file.</p>
-                <div className="errorBar"></div>
+              <div className="errorDiv">
+                <div className="error">
+                  <h2>Invalid image format.</h2>
+                  <p>Please use a valid url address, pdf, or jpeg file.</p>
+                  <div className="errorBar"></div>
+                </div>
               </div>
             )}
             {submitImage && (
