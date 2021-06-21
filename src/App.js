@@ -1,3 +1,4 @@
+import { classes } from "istanbul-lib-coverage";
 import React, { useState } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 
@@ -101,6 +102,7 @@ function App() {
               <div className="error">
                 <p>Invalid image format.</p>
                 <p>Please use a valid url address, pdf, or jpeg file.</p>
+                <div className="errorBar"></div>
               </div>
             )}
             {submitImage && (

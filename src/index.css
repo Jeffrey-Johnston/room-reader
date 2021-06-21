@@ -14,7 +14,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #000000ed;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   display: flex;
@@ -23,7 +23,30 @@ body {
   text-align: center;
   font-size: 18px;
   color: rgb(212, 41, 41);
+  overflow: hidden;
   z-index: 2;
+}
+
+.errorBar {
+  margin: 0 auto;
+  margin-top: 2rem;
+  height: 0.5rem;
+  width: 200px;
+  background-color: rgb(212, 41, 41);
+  /* transition: 3s ease-out; */
+  z-index: 2;
+  animation: errorBar 5s ease-in-out;
+}
+@keyframes errorBar {
+  0% {
+    width: 200px;
+  }
+  50% {
+    width: 100px;
+  }
+  100% {
+    width: 0px;
+  }
 }
 
 /* width */

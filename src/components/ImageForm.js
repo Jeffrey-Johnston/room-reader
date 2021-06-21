@@ -44,7 +44,7 @@ const ImageForm = (props) => {
     }
     setTimeout(() => {
       setImageFileError(false);
-    }, 5000);
+    }, 3000);
   };
 
   const convertToBase64 = (file) => {

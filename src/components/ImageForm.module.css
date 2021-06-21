@@ -129,6 +129,7 @@ input {
 }
 
 .fileError {
+  margin-top: 1rem;
   font-size: 18px;
   color: rgb(212, 41, 41);
 }
