@@ -18,11 +18,12 @@
   transform: translate(-50%, 0);
   width: 12rem;
   height: auto;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .logo:hover {
   width: 13rem;
+  top: -2.5rem;
 }
 
 .backgroundImage {
