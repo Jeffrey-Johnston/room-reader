@@ -55,6 +55,7 @@ input {
   border-radius: none;
   border-bottom: 1px solid #eeeeee;
   background-color: inherit;
+  outline-width: 0;
 }
 
 .or {
@@ -154,10 +155,6 @@ input {
 }
 
 @media only screen and (min-width: 768px) {
-  .imageForm {
-    margin-bottom: 5rem;
-  }
-
   .imageForm button:hover,
   .imageForm button:active {
     color: #2ecacf;

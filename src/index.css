@@ -2,6 +2,7 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -14,6 +15,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #000000ed;
+
   position: fixed;
   left: 0;
   top: 0;
@@ -31,21 +33,34 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   justify-content: space-around;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   border-radius: 12px;
+  border: 1px solid rgb(165, 165, 165);
   /* background-color: #eeeeee; */
   background-color: #272727ce;
 }
 
 .error h2 {
   margin: 0.5rem 0;
-  color: #eeeeee;
+  font-size: 26px;
+  color: rgb(212, 41, 41);
 }
 
-.error p {
+.errorMessage {
+  width: 250px;
   margin: 0.5rem 0;
+  font-size: 18px;
   color: rgb(165, 165, 165);
+}
+
+.closeError {
+  margin: 0.5rem 0;
+  font-size: 24px;
+  color: #2ecacf;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .errorBar {
@@ -224,6 +239,10 @@ code {
 }
 
 @media only screen and (min-width: 768px) {
+  /* .imageForm {
+    margin-bottom: 10rem;
+  } */
+
   .newImageMobile {
     /* display: none; */
     top: 8rem;

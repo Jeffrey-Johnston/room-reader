@@ -62,9 +62,6 @@ function App() {
           setSubmitImage(false);
           setError(false);
         }
-        setTimeout(() => {
-          setError(false);
-        }, 5000);
       })
       .catch((error) => console.log("error", error));
   };
@@ -84,6 +81,10 @@ function App() {
     window.location.reload();
   };
 
+  const closeError = () => {
+    setError(false);
+  };
+
   return (
     <div className="emotion-detector">
       <Switch>
@@ -101,17 +102,24 @@ function App() {
               <div className="errorDiv">
                 <div className="error">
                   <h2>Invalid image format.</h2>
-                  <p>Please use a valid url address, pdf, or jpeg file.</p>
-                  <div className="errorBar"></div>
+                  <p className="errorMessage">
+                    Please use a valid url address, pdf, or jpeg file.
+                  </p>
+                  {/* <div className="errorBar"></div> */}
+                  <p className="closeError" onClick={closeError}>
+                    Close
+                  </p>
                 </div>
               </div>
             )}
             {submitImage && (
-              <ImageForm
-                submitImage={imageSubmissionHandler}
-                setImage={setImageHandler}
-                setTitle={setTitleHandler}
-              />
+              <div className="imageForm">
+                <ImageForm
+                  submitImage={imageSubmissionHandler}
+                  setImage={setImageHandler}
+                  setTitle={setTitleHandler}
+                />
+              </div>
             )}
             {isLoading && (
               <div className="loading-container">
