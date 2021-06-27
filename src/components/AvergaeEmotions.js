@@ -3,28 +3,31 @@ import EmotionKey from "../components/EmotionKey";
 import classes from "./AverageEmotions.module.css";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import { useState } from "react";
+// import { useState } from "react";
 
 const AverageEmotions = (props) => {
-  const [exportClicked, setExportClicked] = useState(false);
+  // const [exportClicked, setExportClicked] = useState(false);
 
   const exportPdf = () => {
-    setExportClicked(true);
     const divToDisplay = document.getElementById("pdfComponent");
     const quality = 1;
 
-    html2canvas(divToDisplay).then(function (canvas) {
+    var clientHeight = divToDisplay.clientHeight;
+    var clientWidth = divToDisplay.clientWidth;
+
+    html2canvas(divToDisplay, {
+      scale: quality,
+    }).then(function (canvas) {
       const divImage = canvas.toDataURL("image/png");
-      const pdf = new jsPDF({
-        scale: quality,
-      });
+      const pdf = new jsPDF("p", "px", [clientWidth, clientHeight]);
       const imgProps = pdf.getImageProperties(divImage);
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-      pdf.addImage(divImage, "PNG", 0, 0, pdfWidth, pdfHeight);
+      // const pdfWidth = pdf.internal.pageSize.getWidth();
+      // const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      var width = pdf.internal.pageSize.getWidth();
+      var height = pdf.internal.pageSize.getHeight();
+      pdf.addImage(divImage, "jpeg", 0, 0, width, height);
       pdf.save(`${props.title}-emotion-stats.pdf`);
     });
-    setExportClicked(false);
   };
 
   // const exportPdf = () => {
@@ -285,15 +288,14 @@ const AverageEmotions = (props) => {
               <textarea
                 className={classes.textArea}
                 rows="4"
+                cols="10"
                 defaultValue="notes..."
               />
             </form>
 
-            {!exportClicked && (
-              <button type="button" onClick={exportPdf}>
-                Exports as pdf
-              </button>
-            )}
+            <button type="button" onClick={exportPdf}>
+              Exports as pdf
+            </button>
           </div>
         </Card>
       </div>

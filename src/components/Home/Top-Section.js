@@ -20,8 +20,8 @@ const TopSection = () => {
 
       <div className={classes.mainContent}>
         <p>
-          Upload images and receive instant analysis of emotion facial
-          expressions.
+          Upload images and receive instant analysis of emotional facial
+          expressions
         </p>
         <p>
           Calculate emotional responses for focus groups, presentations and
