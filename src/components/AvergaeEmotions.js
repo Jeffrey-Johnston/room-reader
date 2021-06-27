@@ -296,7 +296,7 @@ const AverageEmotions = (props) => {
             </form>
 
             {!exportClicked && (
-              <button type="button" onClick={exportPdf}>
+              <button type="button" onClick={exportPdf} target="_blank">
                 Exports as pdf
               </button>
             )}
