@@ -70,6 +70,8 @@ const ImageForm = (props) => {
     setOptions(true);
     setFileOption(false);
     setUrlOption(false);
+    setImageUrl("");
+    setImageFile("");
   };
 
   return (
