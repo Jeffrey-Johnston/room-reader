@@ -20,7 +20,7 @@ const AverageEmotions = (props) => {
     }).then(function (canvas) {
       const divImage = canvas.toDataURL("image/png");
       const pdf = new jsPDF("p", "px", [clientWidth, clientHeight]);
-      const imgProps = pdf.getImageProperties(divImage);
+      // const imgProps = pdf.getImageProperties(divImage);
       // const pdfWidth = pdf.internal.pageSize.getWidth();
       // const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
       var width = pdf.internal.pageSize.getWidth();
