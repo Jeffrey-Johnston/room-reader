@@ -3,14 +3,15 @@ import EmotionKey from "../components/EmotionKey";
 import classes from "./AverageEmotions.module.css";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-// import { useState } from "react";
+import { useState } from "react";
 
 const AverageEmotions = (props) => {
-  // const [exportClicked, setExportClicked] = useState(false);
+  const [exportClicked, setExportClicked] = useState(false);
 
-  const exportPdf = () => {
-    const divToDisplay = document.getElementById("pdfComponent");
-    const quality = 1;
+  const exportPdf = async () => {
+    setExportClicked(true);
+    const divToDisplay = await document.getElementById("pdfComponent");
+    const quality = 5;
 
     var clientHeight = divToDisplay.clientHeight;
     var clientWidth = divToDisplay.clientWidth;
@@ -28,6 +29,7 @@ const AverageEmotions = (props) => {
       pdf.addImage(divImage, "jpeg", 0, 0, width, height);
       pdf.save(`${props.title}-emotion-stats.pdf`);
     });
+    setExportClicked(false);
   };
 
   // const exportPdf = () => {
@@ -293,9 +295,11 @@ const AverageEmotions = (props) => {
               />
             </form>
 
-            <button type="button" onClick={exportPdf}>
-              Exports as pdf
-            </button>
+            {!exportClicked && (
+              <button type="button" onClick={exportPdf}>
+                Exports as pdf
+              </button>
+            )}
           </div>
         </Card>
       </div>
